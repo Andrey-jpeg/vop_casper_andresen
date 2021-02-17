@@ -25,6 +25,18 @@ public class Person implements Comparable<Person>{
         this.heigth = heigth;
     }
 
+    public String getfName() {
+        return fName;
+    }
+
+    public String getlName() {
+        return lName;
+    }
+
+    public GregorianCalendar getBirthDay() {
+        return birthDay;
+    }
+
     @Override
     public String toString() {
         return "fName=" + fName + ", lName=" + lName + ", birthDay=" + birthDay.getTime() + ", height_" + heigth+'\n';
@@ -35,7 +47,14 @@ public class Person implements Comparable<Person>{
     // Hvis det stadig er ens sorteres på fødselsdag.
     @Override
     public int compareTo(Person o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int v = getlName().compareTo(o.getlName());
+        if(v == 0) {
+            v = getfName().compareTo(o.getfName());
+        }
+        if (v == 0) {
+            v = getBirthDay().compareTo(o.getBirthDay());
+        }
+        return v;
     }
 
     public static void main(String[] args) {
