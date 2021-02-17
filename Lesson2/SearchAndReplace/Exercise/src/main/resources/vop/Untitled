@@ -1,0 +1,16 @@
+﻿/**
+ * YoWorld Example for use during the VOP exam F15
+ * @author erso   Created on 15-05-2015, 10:19:06
+ */
+public class YoWorld {
+
+    public YoWorld() {
+        System.out.println("YoWorld");
+    }
+
+
+    public static void main(String[] args) {
+        YoWorld helloWorld = new YoWorld();
+    }
+}
+

@@ -21,10 +21,10 @@ public class ShapeDriver {
     public static void main(String[] args) {
         List<ShapeInterface> list = new ArrayList<>();
         // Fjern udkommenteringen efterhånden som klasserne er implementeret:
-//        list.add(new Circle(3.4));
-//        list.add(new Rectangle(3.4, 4.4));
-//        list.add(new Ellipse(3.4, 2.7));
-//        list.add(new Square(3.4));
+        list.add(new Circle(3.4));
+        list.add(new Rectangle(3.4, 4.4));
+        list.add(new Ellipse(3.4, 2.7));
+        list.add(new Square(3.4));
         
         System.out.println("Shapes: " + list);
     }

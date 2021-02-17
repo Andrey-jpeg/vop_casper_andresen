@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vop.PrimaryController">
 
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vop.PrimaryController">
+   <RadioButton fx:id="circleButton" layoutX="126.0" layoutY="204.0" mnemonicParsing="false" onMouseClicked="#hideVar2" text="Circle">
+      <toggleGroup>
+         <ToggleGroup fx:id="shapeSelected" />
+      </toggleGroup>
+   </RadioButton>
+   <RadioButton fx:id="squareButton" layoutX="127.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#hideVar2" text="Square" toggleGroup="$shapeSelected" />
+   <RadioButton fx:id="rectangleButton" layoutX="127.0" layoutY="257.0" mnemonicParsing="false" onMouseClicked="#showVar2" text="Rectangle" toggleGroup="$shapeSelected" />
+   <RadioButton fx:id="ellipseButton" layoutX="127.0" layoutY="290.0" mnemonicParsing="false" onMouseClicked="#showVar2" text="Ellipse" toggleGroup="$shapeSelected" />
+   <Button fx:id="getInfo" layoutX="344.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#populateTextArea" text="Get info" />
+   <TextArea fx:id="textArea" layoutX="272.0" layoutY="166.0" prefHeight="200.0" prefWidth="200.0" />
+   <TextField fx:id="var1" layoutX="170.0" layoutY="61.0" />
+   <TextField fx:id="var2" layoutX="349.0" layoutY="61.0" text="0" />
 </AnchorPane>

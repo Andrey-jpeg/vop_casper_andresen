@@ -10,8 +10,8 @@
     <version>1.0</version>
     <modules>
         <module>Lesson1/Ciphers/Exercise</module>
-        <module>Lesson1/Ciphers/Solution</module>
         <module>Lesson1/Polymorphism/Exercise</module>
+<<<<<<< Updated upstream
         <module>Lesson1/Polymorphism/Solution</module>
         <module>Lesson2Preparation/CamelCase/Exercise</module>
         <module>Lesson2Preparation/CamelCase/Solution</module>
@@ -22,5 +22,7 @@
         <module>Lesson3Preparation/Compare/Exercise</module>
         <module>Lesson3Preparation/Compare/Solution</module>
         <module>Lesson3/Mountains/Exercise</module>
+=======
+>>>>>>> Stashed changes
     </modules>
 </project>

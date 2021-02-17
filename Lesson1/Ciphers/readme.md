@@ -6,7 +6,7 @@ Fra VOP F16 Eksamen - 10. juni 2016
 
 **Vigtigt**: Der kan være problemer med at eksekvere klasser med en main()-metode under et JavaFx projekt.
 Brug Shift-F11 eller højre klik på projektet og vælg Clean and Build, inden run kaldes direkte på en Java main
-klasse. Desuden kræver projektet JDK 15 eller nyere. Hvis din(e) JDK er ældre kan JDK 15 downloades her: https://www.oracle.com/in/java/technologies/javase-jdk15-downloads.html 
+klasse. Desuden kræver projektet JDK 15 eller nyere. Hvis din(e) JDK er ældre kan JDK 15 downloades her: https://www.oracle.com/java/technologies/javase/jdk15-archive-downloads.html
 
 **Hint**: Giv dig tid til at gennemlæse hele opgavesættet, inden du går i gang med løsningerne. Du bør dog
 starte med at opsætte projektet, som beskrevet i Opgave 1.
