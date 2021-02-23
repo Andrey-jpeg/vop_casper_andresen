@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26d04742-f213-4948-94f8-b3606cdb52ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/vop/MountainRangeComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vop/MountainSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vop/Mountain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vop/Mountain.java" afterDir="false" />
-    </list>
+    <list default="true" id="26d04742-f213-4948-94f8-b3606cdb52ca" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,5 +94,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
