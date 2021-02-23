@@ -22,7 +22,11 @@
         <module>Lesson3Preparation/Compare/Exercise</module>
         <module>Lesson3Preparation/Compare/Solution</module>
         <module>Lesson3/Mountains/Exercise</module>
+<<<<<<< HEAD
 =======
 >>>>>>> Stashed changes
+=======
+        <module>Lesson3/Mountains/Solution</module>
+>>>>>>> 566185cc0600af7e0b8a34a785c6483a987e3a4d
     </modules>
 </project>
