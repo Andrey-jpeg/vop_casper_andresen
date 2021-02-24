@@ -28,10 +28,14 @@
 =======
         <module>Lesson3/Mountains/Solution</module>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 566185cc0600af7e0b8a34a785c6483a987e3a4d
 =======
         <module>Lesson4/CardGames/Exercise</module>
         <module>Lesson4/LicensePlates/Exercise</module>
 >>>>>>> 5ce460d1131b6ef244d6b8765f169225cd762de5
+=======
+        <module>Lesson4/SerialIOAndThreadedTCP/Exercise</module>
+>>>>>>> bbacd3cf7103e1d6101c67c117d4d4821c3ca30f
     </modules>
 </project>
