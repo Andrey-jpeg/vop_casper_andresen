@@ -9,18 +9,26 @@ import java.util.logging.Logger;
 
 public class WriteSpeciesFileAppend {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         String fileName = getFileName("Enter output file name.");
+        File file = new File(fileName);
 
-        try (ObjectOutputStream outputStream = new ObjectOutputStream(
-                new FileOutputStream(fileName, true))) {
+        ObjectOutputStream os = file.exists() ? new ObjectOutputStream(new FileOutputStream(file,true)){
+            @Override
+            protected void writeStreamHeader() throws  IOException {
+                reset();
+            }
+        } : new ObjectOutputStream(new FileOutputStream(fileName, true));
+
+        try {
             Species califCondor
                     = new Species("Calif. Condor", 27, 0.02);
-            outputStream.writeObject(califCondor);
+            os.writeObject(califCondor);
 
             Species blackRhino
                     = new Species("Black Rhino", 100, 1.0);
-            outputStream.writeObject(blackRhino);
+            os.writeObject(blackRhino);
+
 
         } catch (IOException e) {
             System.err.println("Error opening output file "
@@ -54,6 +62,8 @@ public class WriteSpeciesFileAppend {
         } catch (ClassNotFoundException ex) {
             System.err.println(ex);
         }
+
+
 
     }
 
