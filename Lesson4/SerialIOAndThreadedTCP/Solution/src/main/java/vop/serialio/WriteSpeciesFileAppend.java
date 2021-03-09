@@ -1,34 +1,47 @@
 package vop.serialio;
 
-
+/**
+ * File name: WriteSpeciesFile.java
+ *
+ * A class to build binary files of Species records (type Species). It is a
+ * utility file for FindSpeciesRecords.java.
+ *
+ * Note: after all records are written to the file it displays the values
+ * entered so they can be verified.
+ *
+ * Based on ClassObjectIODemo.java, Listing 10.10
+ *
+ * Uses Species.java, Listing 10.9
+ *
+ * Written by: Lew Rakocy email address: LRakocy@devrycols.edu Date: 04/05/2003
+ * Updated for fourth edition by Brian Durney, January 2005.
+ */
 import java.io.*;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 
 public class WriteSpeciesFileAppend {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         String fileName = getFileName("Enter output file name.");
         File file = new File(fileName);
-
-        ObjectOutputStream os = file.exists() ? new ObjectOutputStream(new FileOutputStream(file,true)){
-            @Override
-            protected void writeStreamHeader() throws  IOException {
-                reset();
-            }
-        } : new ObjectOutputStream(new FileOutputStream(fileName, true));
-
-        try {
+        try (ObjectOutputStream outputStream = 
+                file.exists() ? 
+                new ObjectOutputStream(new FileOutputStream(file, true)) {
+                    @Override
+                    protected void writeStreamHeader() throws IOException {
+                        super.reset();
+                    }
+                }
+                : new ObjectOutputStream(new FileOutputStream(file, true));)
+        {
             Species califCondor
                     = new Species("Calif. Condor", 27, 0.02);
-            os.writeObject(califCondor);
+            outputStream.writeObject(califCondor);
 
             Species blackRhino
                     = new Species("Black Rhino", 100, 1.0);
-            os.writeObject(blackRhino);
-
+            outputStream.writeObject(blackRhino);
 
         } catch (IOException e) {
             System.err.println("Error opening output file "
@@ -40,9 +53,8 @@ public class WriteSpeciesFileAppend {
                 + fileName + ".");
         System.out.println(
                 "Now let's reopen the file and echo the records.");
-
-        Species readOne;
         int records = 0;
+        Species readOne;
         try (ObjectInputStream inputStream = new ObjectInputStream(
                 new FileInputStream(fileName))) {
 
@@ -53,7 +65,7 @@ public class WriteSpeciesFileAppend {
                 records++;
             }
         } catch (EOFException eof) {
-            System.out.println("Reading Done! " + records);
+            System.out.println("Reading Done! "  + records);
 
         } catch (IOException e) {
             System.err.println("Error opening input file "
@@ -62,8 +74,6 @@ public class WriteSpeciesFileAppend {
         } catch (ClassNotFoundException ex) {
             System.err.println(ex);
         }
-
-
 
     }
 
