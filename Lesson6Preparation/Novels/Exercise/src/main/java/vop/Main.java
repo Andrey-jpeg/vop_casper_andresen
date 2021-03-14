@@ -6,6 +6,7 @@ public class Main {
         for (String fileName : fileNames) {
             Runnable wcr = new WordCountRunnable(fileName);
             // Start a Thread for the Runnable here:
+            wcr.run();
         }
     }
 }

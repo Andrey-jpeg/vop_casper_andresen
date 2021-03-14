@@ -5,29 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26d04742-f213-4948-94f8-b3606cdb52ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/CardGames/Exercise/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/CardGames/Exercise/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/CardGames/Exercise/src/main/java/vop/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/CardGames/Exercise/src/main/java/vop/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/CardGames/Exercise/src/main/java/vop/CardInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/CardGames/Exercise/src/main/java/vop/DeckOfCards.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/CardGames/Exercise/src/main/java/vop/PrimaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/CardGames/Exercise/src/main/resources/vop/primary.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/CardGames/assets/cards1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/CardGames/assets/cards2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/CardGames/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/LicensePlates/Exercise/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/LicensePlates/Exercise/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/LicensePlates/Exercise/src/main/java/vop/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/LicensePlates/Exercise/src/main/java/vop/NumberPlates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/LicensePlates/Exercise/src/main/java/vop/PrimaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/LicensePlates/Exercise/src/main/java/vop/VehicleType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/LicensePlates/Exercise/src/main/resources/vop/nummerplader.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/LicensePlates/Exercise/src/main/resources/vop/primary.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/LicensePlates/assets/license.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Lesson4/LicensePlates/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
