@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="vop.PrimaryController">
+    <Label fx:id="funLabel" layoutX="2.0" layoutY="20.0" prefHeight="50.0" prefWidth="306.0" text="Welcome">
+        <font>
+            <Font name="System Bold Italic" size="24.0"/>
+        </font>
+    </Label>
+    <Button fx:id="startButton" layoutX="14.0" layoutY="88.0" mnemonicParsing="false" onAction="#startHandler"
+            text="Start"/>
+    <Button fx:id="stopButton" layoutX="68.0" layoutY="88.0" mnemonicParsing="false" onAction="#stopHandler"
+            text="Stop"/>
+    <RadioButton fx:id="radio100" layoutX="198.0" layoutY="80.0" mnemonicParsing="false" onAction="#radioHandler"
+                 text="100 ms">
+        <toggleGroup>
+            <ToggleGroup fx:id="radioGroup"/>
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="radio200" layoutX="198.0" layoutY="105.0" mnemonicParsing="false" onAction="#radioHandler"
+                 selected="true" text="200 ms" toggleGroup="$radioGroup"/>
+    <RadioButton fx:id="radio400" layoutX="198.0" layoutY="136.0" mnemonicParsing="false" onAction="#radioHandler"
+                 text="400 ms" toggleGroup="$radioGroup"/>
+</AnchorPane>
