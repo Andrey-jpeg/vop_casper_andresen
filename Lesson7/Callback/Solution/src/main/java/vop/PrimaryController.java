@@ -1,6 +1,7 @@
 package vop;
 
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -27,31 +28,24 @@ public class PrimaryController implements Initializable, CallBackInterface {
     @FXML
     private ImageView die2view;
 
-    private Thread facade;
+    private FacadeWithCallback facade;
 
 
-        @Override
+    @Override
     public void initialize(URL url, ResourceBundle rb) {
+
         startButton.setDisable(false);
         stopButton.setDisable(true);
     }
 
     @FXML
-    private void buttonAction(ActionEvent event) {
+    private void buttonAction(ActionEvent event) throws URISyntaxException {
         if (event.getSource() == startButton) {
-            try{
-                facade = new FacadeWithCallback(this, this.getClass().getResource("").toURI().getRawPath());
-                facade.start();
-                startButton.setDisable(true);
-                stopButton.setDisable(false);
-            } catch (URISyntaxException e) {
-                e.printStackTrace();
-                System.exit(0);
-            }
-            // Initialize the facade and start it.
-            // handle access to the buttons
+            facade = new FacadeWithCallback(this);
+            facade.start();
+            startButton.setDisable(true);
+            stopButton.setDisable(false);
         } else {
-            // Stop the facade
             facade.interrupt();
             startButton.setDisable(false);
             stopButton.setDisable(true);
@@ -60,16 +54,28 @@ public class PrimaryController implements Initializable, CallBackInterface {
 
     @Override
     public void updateMessage(String message) {
-        // This is the implementation of the CallBack. Remember it is called from a Thread!
-        textArea.appendText(message);
-        if (!facade.isAlive()) {
-            stopButton.fire();
-        }
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                textArea.appendText(message + "\n");
+                if (!facade.isAlive()) {
+                    stopButton.fire();
+                }
+            }
+        });
     }
 
     @Override
     public void updateImages(File i1, File i2) {
-        die1view.setImage(new Image(i1.toURI().toString()));
-        die2view.setImage(new Image(i2.toURI().toString()));
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                die1view.setImage(new Image(i1.toURI().toString()));
+                die2view.setImage(new Image(i2.toURI().toString()));
+            }
+        });
+
     }
+
+
 }

@@ -16,32 +16,34 @@ public class CircularBuffer {
 
     synchronized int get() {
         while (buffer[getIndex] == null) {
+            System.out.println("*** Buffer empty ****");
             try {
                 wait();
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                System.out.println("InterruptedException caught");
             }
         }
-        int currentValue = buffer[getIndex];
-        System.out.println("got : " + currentValue);
+        int value = buffer[getIndex];
         buffer[getIndex] = null;
-        getIndex = (getIndex + 1) % size; //when array has no more spaces it wraps around.
-        notify();
-        return currentValue;
+        System.out.println(Thread.currentThread().getName()+"\tGot: " + getIndex + ": " + value);
+        getIndex = (getIndex+1) % size;
+        notifyAll();
+        return value;
     }
 
     synchronized void put(int n) {
         while (buffer[putIndex] != null) {
+            System.out.println("*** Buffer full ****");
             try {
                 wait();
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                System.out.println("InterruptedException caught");
             }
         }
-        System.out.println("Put " + n);
         buffer[putIndex] = n;
-        putIndex = (putIndex + 1) % size; //when array has no more spaces it wraps around.
-        notify();
+        System.out.println(Thread.currentThread().getName()+" Put: " + putIndex+ ": " +n);
+        putIndex = (putIndex+1) %size;
+        notifyAll();
     }
 
 

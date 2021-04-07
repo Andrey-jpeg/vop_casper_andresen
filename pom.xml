@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>dk.sdu</groupId>
+    <artifactId>VOP-F21</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <modules>
+        <module>Lesson1/Ciphers/Exercise</module>
+        <module>Lesson1/Ciphers/Solution</module>
+        <module>Lesson1/Polymorphism/Exercise</module>
+        <module>Lesson1/Polymorphism/Solution</module>
+        <module>Lesson2Preparation/CamelCase/Exercise</module>
+        <module>Lesson2Preparation/CamelCase/Solution</module>
+        <module>Lesson2Preparation/DanishIslands/Exercise</module>
+        <module>Lesson2Preparation/DanishIslands/Solution</module>
+        <module>Lesson2/SearchAndReplace/Exercise</module>
+        <module>Lesson2/SearchAndReplace/Solution</module>
+        <module>Lesson3Preparation/Compare/Exercise</module>
+        <module>Lesson3Preparation/Compare/Solution</module>
+        <module>Lesson3/Mountains/Exercise</module>
+        <module>Lesson3/Mountains/Solution</module>
+        <module>Lesson4/SerialIOAndThreadedTCP/Exercise</module>
+        <module>Lesson4/SerialIOAndThreadedTCP/Solution</module>
+        <module>Lesson6Preparation/Novels/Exercise</module>
+        <module>Lesson6Preparation/Novels/Solution</module>
+        <module>Lesson6/OneArmedBandit/Exercise</module>
+        <module>Lesson6/OneArmedBandit/Solution</module>
+        <module>Lesson7/Callback/Exercise</module>
+        <module>Lesson7/Callback/Solution</module>
+        <module>Lesson7/CircularBuffer/Exercise</module>
+        <module>Lesson7/CircularBuffer/Solution</module>
+        <module>Lesson8/CallbackWithTest/Exercise</module>
+        <module>Lesson8/CallbackWithTest/Solution</module>
+        <module>Lesson8/BinarySearch/Exercise</module>
+        <module>Lesson8/BinarySearch/Solution</module>
+        <module>Lesson9/ArrayManipulation/Exercise</module>
+        <module>Lesson9/BinarySearchExample</module>
+        <module>Lesson9/FilesInDirs/Exercise</module>
+    </modules>
+</project>
